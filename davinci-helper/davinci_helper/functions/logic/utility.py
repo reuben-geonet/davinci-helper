@@ -44,18 +44,17 @@ def check_fedora_version () -> str:
 
     try:
         # For Fedora, Nobara and Ultramarine Linux we can
-        # use a simple OS version detection
-        # We simply read /etc/os-release, which is formatted like this:
+        # use a simple OS version detection:
+        # we simply read /etc/os-release, which is formatted like this:
         # NAME="Fedora Linux"
         # VERSION="43 (Workstation Edition)"
         # RELEASE_TYPE=stable
         # ID=fedora
         # VERSION_ID=43
+        # [..other stuff..]
         os_release_text = os_release_path.read_text()
         os_name = re.findall(r'^NAME="([a-zA-Z" ]+)"', os_release_text)[0]
 
-        # For Fedora, Nobara and Ultramarine Linux we can
-        # use a simplified OS version detection
         if os_name in ["Fedora Linux", "Nobara Linux", "Ultramarine Linux"]:
             version_num = re.findall(rf'VERSION_ID=(\d+)', os_release_text)
             version_num = int(version_num[0])
