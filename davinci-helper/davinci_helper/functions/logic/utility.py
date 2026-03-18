@@ -62,7 +62,7 @@ def check_fedora_version () -> str:
             os_version = f"Fedora Linux {version_num}"
 
         else:
-            os_info = subprocess.run("hostnamectl", shell=True, capture_output=True, text=True)
+            os_info = subprocess.run("hostnamectl", capture_output=True, text=True)
             if ((os_info.stdout).lower()).find("rawhide") != -1 :
                 os_version = "Fedora Linux Rawhide"
 
