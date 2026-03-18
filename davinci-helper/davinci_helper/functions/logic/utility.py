@@ -58,7 +58,7 @@ def check_fedora_version () -> str:
         if os_name in ["Fedora Linux", "Nobara Linux", "Ultramarine Linux"]:
             version_num = re.findall(rf'VERSION_ID=(\d+)', os_release_text)
             version_num = int(version_num[0])
-            os_version = f"Fedora Linux {version_num}"
+            os_version = f"{os_name} {version_num}"
 
         else:
             os_info = subprocess.run("hostnamectl", capture_output=True, text=True)
