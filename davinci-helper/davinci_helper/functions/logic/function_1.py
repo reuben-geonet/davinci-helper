@@ -259,3 +259,14 @@ elif os_version.find("Rawhide") != -1 :
 
     # EXECUTION OF THE FUNCTION THAT INSTALL THE MISSING DEPENDENCIES
     check_dependencies_41(library_list)
+
+else:
+    print(_("DEBUG : There was an error installing the missing libraries :"))
+    print("")
+    print("Could not match the installed version of Fedora with the supported ones.")
+    print("")
+    print(_("Please open an issue report and paste this error code on the project GitHub page :"))
+    print("")
+    print("https://github.com/H3rz3n/davinci-helper/issues")
+    print("")
+    exit(3)
