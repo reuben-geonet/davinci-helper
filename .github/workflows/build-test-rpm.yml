@@ -22,6 +22,8 @@ jobs:
             name: fedora-42
           - distro: "fedora:43"
             name: fedora-43
+          - distro: "fedora:44"
+            name: fedora-44
           - distro: "fedora:rawhide"
             name: fedora-rawhide
     container:

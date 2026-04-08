@@ -238,6 +238,8 @@ match os_version:
         check_dependencies_41(library_list)
     case version if "43" in version:
         check_dependencies_41(library_list)
+    case version if "44" in version:
+        check_dependencies_41(library_list)
     case version if "Rawhide" in version:
         check_dependencies_41(library_list)
     case _:
