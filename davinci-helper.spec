@@ -91,7 +91,9 @@ install -Dm644 %{_builddir}/%{name}-%{version}/data/polkit/com.davinci.helper.ap
 # POST INSTALLATION OPERATIONS
 %post
 update-desktop-database &> /dev/null || :
-sudo systemctl restart polkit
+if [ -d /run/systemd/system ]; then
+    systemctl restart polkit
+fi
 
 # CHANGELOG OF THE VERSION 
 %changelog
