@@ -2,7 +2,7 @@
 Name:           davinci-helper
 
 # APP VERSION
-Version:        2.4.7
+Version:        2.5.0
 
 # RELEASE AND DISTRIBUTION VERSION
 Release:        1
@@ -95,6 +95,9 @@ sudo systemctl restart polkit
 
 # CHANGELOG OF THE VERSION 
 %changelog
+
+* Fri May 09 2025 Lorenzo Maiuri <lorenzo.maiuri@ik.me> - 2.5.0-1
+- Changes to support a new CI workflow and new release process.
 
 * Thu May 08 2025 Lorenzo Maiuri <lorenzo.maiuri@ik.me> - 2.4.7-1
 - Fixed a major typo in the source code.
