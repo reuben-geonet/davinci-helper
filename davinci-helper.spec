@@ -34,6 +34,7 @@ BuildRequires: pyproject-rpm-macros
 # DEPENDENCIES REQUIRED FOR EXECUTION
 Requires: gtk4
 Requires: libadwaita
+Requires: python3-gobject
 
 # DISABLING THE AUTOMATIC DEPENDENCIES GENERATOR
 %undefine __python_requires
