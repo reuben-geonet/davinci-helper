@@ -112,6 +112,3 @@ sudo systemctl restart polkit
 
 * Fri Feb 07 2025 Lorenzo Maiuri <lorenzo.maiuri@ik.me> - 2.3.5-1
 - Fixed polkit not restarting after app installation.
-
-
-
